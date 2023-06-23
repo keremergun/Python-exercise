@@ -24,4 +24,17 @@ def luckyNumber(numbers):
     return numbers
 
 
-print(luckyNumber(numbers))
+printing = str()
+
+luckies = luckyNumber(numbers)
+
+index = 0
+for lucky in luckies:
+    if index == 0:
+        printing = lucky
+    else:
+        printing += " " + lucky
+
+    index += 1
+
+print(printing)
