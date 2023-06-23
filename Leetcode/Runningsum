@@ -1,0 +1,14 @@
+class Solution(object):
+    def runningSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        totals = list()
+        last = 0
+        for eleman in nums:
+            totals.append(eleman+last)
+            last += eleman
+        
+        return totals
+    
