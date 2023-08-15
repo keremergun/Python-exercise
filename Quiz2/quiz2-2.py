@@ -1,5 +1,7 @@
 import sys
 
+#kero
+
 numbers = list()
 
 for number in sys.argv[1:]:
