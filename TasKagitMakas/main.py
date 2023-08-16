@@ -1,4 +1,5 @@
 import random
+import time
 
 play = True 
 
@@ -8,8 +9,7 @@ while play:
     
     while player != "T" and player != "K" and player != "M":
         player = input("Lütfen T,K veya M giriniz ==> ")
-    
-    player = player.capitalize()
+        player = player.capitalize()
     
     computer = random.randint(1,3)
     if computer == 1:
@@ -18,6 +18,15 @@ while play:
         computer = "K"
     elif computer == 3:
         computer = "M" 
+    
+    time.sleep(0.5)    
+    print("TAŞ...")
+    time.sleep(0.5)
+    print("KAĞIT...")
+    time.sleep(0.5)
+    print("MAKAS...")
+    time.sleep(0.5)
+
     
     if player == "T" and computer == "T":
         print("Sen Taş seçtin, Bilgisayarda Taş seçti. Kısaca berabere XD")
@@ -40,7 +49,7 @@ while play:
     elif player == "M" and computer == "K":
         print("Sen Makas seçtin, bilgisayarda Kağıt seçti. Yani sen kazandınnnn!!!")
         
-    play = input("Tekrar oynamak için e, çıkmak için q ya basın")
+    play = input("Tekrar oynamak için e, çıkmak için q ya basın ==> ")
     
     player = player.lower()
     
